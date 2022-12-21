@@ -1,6 +1,6 @@
 ﻿namespace ContactsBook.Models
 {
-    abstract class ContactCreator
+    abstract  class ContactCreator
     {
         public abstract IContact CreatorMethod();
     }
