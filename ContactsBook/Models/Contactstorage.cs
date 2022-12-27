@@ -24,12 +24,17 @@ namespace ContactsBook.Models
         }
         public IEnumerable<IContact> NameFilter(string item)
         {
-            var names = Contacts.Where<IContact>(x => x.Name == item || x.LastName == item).ToList<IContact>();
+            var names = Contacts.Where<IContact>(x => x.Name.Contains(item) || x.LastName.Contains(item)|| x.Phone.Contains(item)).ToList<IContact>();
             return names;
         }
         public IContact FindContact(string firstname, string lastname)
         {
             var oneContact = Contacts.FirstOrDefault(x=> x.Name == firstname && x.LastName == lastname, new PersonalContact());
+            return oneContact;
+        }
+        public IContact FindContact(string phone)
+        {
+            var oneContact = Contacts.FirstOrDefault(x => x.Phone == phone || x.Phone2 == phone, new PersonalContact());
             return oneContact;
         }
         public void Dispose()
