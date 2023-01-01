@@ -34,7 +34,7 @@ namespace ContactsBook.Models
         }
         public IContact FindContact(string phone)
         {
-            var oneContact = Contacts.FirstOrDefault(x => x.Phone == phone || x.Phone2 == phone, new PersonalContact());
+            IContact? oneContact = Contacts.FirstOrDefault(x => x.Phone == phone || x.Phone2 == phone, null);
             return oneContact;
         }
         public void Dispose()

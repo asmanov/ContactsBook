@@ -2,6 +2,6 @@
 {
     abstract  class ContactCreator
     {
-        public abstract IContact CreatorMethod();
+        public  abstract IContact CreatorMethod();
     }
 }
