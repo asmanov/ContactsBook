@@ -1,4 +1,18 @@
 ﻿
+using ContactsBook.Controlers;
+using ContactsBook.Models;
 using ContactsBook.Viewer;
 
-Menu.MainMenu();
+string path = "mycontact.txt";
+using(ContactStorage mycontacts = new ContactStorage(path))
+{
+    IMenu menu = new MainMenu();
+    IControler controler = new MainMenuControler();
+    while(true)
+    {
+        Console.Clear();
+        menu.ShowMenu();
+        string key = Console.ReadLine();
+        controler.InputMenu(ref menu, ref controler, key);
+    }
+}
