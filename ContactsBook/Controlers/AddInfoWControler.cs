@@ -3,9 +3,9 @@ using ContactsBook.Viewer;
 
 namespace ContactsBook.Controlers
 {
-    internal class FindMenuControler : IControler
+    internal class AddInfoWControler : IControler
     {
-        void IControler.InputMenu(ref IMenu menu, ref IControler controler, string key)
+        void  IControler.InputMenu(ref IMenu menu, ref IControler controler, string key)
         {
            
         }

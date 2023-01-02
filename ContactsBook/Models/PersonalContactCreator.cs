@@ -1,6 +1,6 @@
 ﻿namespace ContactsBook.Models
 {
-    internal  class PersonalContactCreator : ContactCreator
+    internal class PersonalContactCreator : ContactCreator
     {
         public   override IContact CreatorMethod()
         {

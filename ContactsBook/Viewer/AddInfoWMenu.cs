@@ -4,15 +4,15 @@
     {
         void IMenu.ShowMenu()
         {
-            Console.WriteLine("=====Enter contact's info=====\n\n" +
-                "Name. Enter - 1\n" +
-                "Last Name. Enter - 2\n" +
-                "Phone. Enter - 3\n" +
-                "Phone 2. Enter - 4\n" +
-                "Email. Enter - 5\n" +
-                "Address. Enter - 6\n" +
-                "Organisation. Enter - 7\n" +
-                "Position. Enter - 8");
+            Console.WriteLine("========Enter contact's info=====\n\n" +
+                "\tName. Enter - 1\n" +
+                "\tLast Name. Enter - 2\n" +
+                "\tPhone. Enter - 3\n" +
+                "\tPhone 2. Enter - 4\n" +
+                "\tEmail. Enter - 5\n" +
+                "\tAddress. Enter - 6\n" +
+                "\tOrganisation. Enter - 7\n" +
+                "\tPosition. Enter - 8");
         }
     }
 }

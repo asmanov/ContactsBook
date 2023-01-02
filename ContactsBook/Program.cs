@@ -8,6 +8,7 @@ using(ContactStorage mycontacts = new ContactStorage(path))
 {
     IMenu menu = new MainMenu();
     IControler controler = new MainMenuControler();
+    IContact contact;
     while(true)
     {
         Console.Clear();
