@@ -5,9 +5,14 @@ namespace ContactsBook.Controlers
 {
     internal abstract class Controler : IControler
     {
-        void IControler.InputMenu(ref IMenu menu, ref IControler controler, string key)
+        public virtual void InputMenu(ref IMenu menu, ref IControler controler, string key, ref bool flag)
         {
             
         }
+        public virtual void InputMenu(ref IMenu menu, ref IControler controler, string key, ref bool flag, ContactStorage contacts)
+        {
+
+        }
+
     }
 }

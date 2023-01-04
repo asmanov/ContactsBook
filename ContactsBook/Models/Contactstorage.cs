@@ -22,19 +22,19 @@ namespace ContactsBook.Models
             var categorii = Contacts.Where<IContact>(x => x.GetType() == item.GetType()).ToList<IContact>();
             return categorii;
         }
-        public IEnumerable<IContact> NameFilter(string item)
+        public List<IContact> NameFilter(string item)
         {
-            var names = Contacts.Where<IContact>(x => x.Name.Contains(item) || x.LastName.Contains(item)|| x.Phone.Contains(item)).ToList<IContact>();
+            List<IContact> names = Contacts.Where<IContact>(x => x.Name.Contains(item) || x.LastName.Contains(item)|| x.Phone.Contains(item)|| x.Phone2.Contains(item)).ToList<IContact>();
             return names;
         }
         public IContact FindContact(string firstname, string lastname)
         {
-            var oneContact = Contacts.FirstOrDefault(x=> x.Name == firstname && x.LastName == lastname, new PersonalContact());
+           IContact oneContact = Contacts.FirstOrDefault(x=> (x.Name == firstname && x.LastName == lastname) || (x.Name == lastname && x.LastName == firstname));
             return oneContact;
         }
         public IContact FindContact(string phone)
         {
-            var oneContact = Contacts.FirstOrDefault(x => x.Phone == phone || x.Phone2 == phone, new PersonalContact());
+            var oneContact = Contacts.FirstOrDefault(x => x.Phone == phone || x.Phone2 == phone);
             return oneContact;
         }
         public void Dispose()

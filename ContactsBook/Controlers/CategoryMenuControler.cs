@@ -6,7 +6,7 @@ namespace ContactsBook.Controlers
     internal class CategoryMenuControler : Controler, IControler
     {
         
-        void IControler.InputMenu(ref IMenu menu, ref IControler controler, string key)
+        public void InputMenu(ref IMenu menu, ref IControler controler, string key, ref bool flag)
         {
             //ContactCreator contactCreator;
             //IContact contact;
@@ -21,10 +21,11 @@ namespace ContactsBook.Controlers
             {
                 menu = new AddInfoPMenu();
                 controler = new AddInfoPControler();
-                PersonalContactCreator personalContactCreator = new PersonalContactCreator();
+                //PersonalContactCreator personalContactCreator = new PersonalContactCreator();
                 //contactCreator = new PersonalContactCreator();
                 //contact = (PersonalContact)contactCreator.CreatorMethod();
             }
+            flag = false;
         }
     }
 }

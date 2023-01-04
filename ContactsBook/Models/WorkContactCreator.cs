@@ -4,7 +4,7 @@
     {
         public override IContact CreatorMethod()
         {
-            return new WorkContact();
+            return WorkContact.GetWorkContact();
         }
     }
 }

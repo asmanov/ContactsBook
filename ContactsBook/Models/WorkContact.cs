@@ -10,9 +10,18 @@
         public Address Address { get; set; } = null;
         public string Organization { get; set; } = string.Empty;
         public string Position { get; set; } = string.Empty;
-        public WorkContact()
-        {
+        public string Status { get ; set; }
+        public string Birthday { get ; set; }
 
+        private static WorkContact _instance;
+        private WorkContact() { }
+        public static WorkContact GetWorkContact()
+        {
+            if( _instance == null)
+            {
+                _instance = new WorkContact();
+            }
+            return _instance;
         }
     }
 }

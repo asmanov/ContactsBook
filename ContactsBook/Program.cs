@@ -9,11 +9,20 @@ using(ContactStorage mycontacts = new ContactStorage(path))
     IMenu menu = new MainMenu();
     IControler controler = new MainMenuControler();
     IContact contact;
-    while(true)
+    bool flag = true;
+    while(flag)
     {
         Console.Clear();
         menu.ShowMenu();
         string key = Console.ReadLine();
-        controler.InputMenu(ref menu, ref controler, key);
+        controler.InputMenu(ref menu, ref controler, key, ref flag);
+    }
+    flag = true;
+    while (flag)
+    {
+        Console.Clear();
+        menu.ShowMenu();
+        string key = Console.ReadLine();
+        controler.InputMenu(ref menu, ref controler, key, ref flag, mycontacts);
     }
 }

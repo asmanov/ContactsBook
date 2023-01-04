@@ -2,9 +2,9 @@
 {
     internal class PersonalContactCreator : ContactCreator
     {
-        public   override IContact CreatorMethod()
+        public override IContact CreatorMethod()
         {
-            return new PersonalContact();
+            return PersonalContact.GetPersonalContact();
         }
     }
 }

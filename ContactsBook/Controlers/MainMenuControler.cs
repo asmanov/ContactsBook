@@ -2,9 +2,9 @@
 
 namespace ContactsBook.Controlers
 {
-    internal class MainMenuControler : IControler
+    internal class MainMenuControler : Controler, IControler
     {
-        void IControler.InputMenu(ref IMenu menu, ref IControler controler, string key)
+        public void InputMenu(ref IMenu menu, ref IControler controler, string key, ref bool flag)
         {
             if (key == "1")
             {
@@ -15,6 +15,7 @@ namespace ContactsBook.Controlers
             {
                 menu = new FindContactMenu();
                 controler = new FindMenuControler();
+                flag = false;
             }
         }
     }
